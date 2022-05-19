@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>デリバリー | 信濃おやき 幸庵 | 美麻ウマイもん31</title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+	<link href="/assets/images/favicon.ico" rel="icon">
+</head>
+<body class="delivery">
+  <!-- facebook api -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="yaAR5vqU"></script>
+
+  <!-- header -->
+  <header class="site_header">
+    <a href="/" class="site_logo"><img src="/assets/images/common/logo_main.svg" alt="美麻ウマイもん31"></a>
+    <nav class="global_menu">
+      <ul class="menu">
+        <li class="menu_item"><a href="/">ホーム</a></li>
+        <li class="menu_item">
+          <span class="has_child has_child__shop js_tgl_open-close">店舗紹介</span>
+          <ul class="menu menu__child">
+            <li class="menu_item"><a href="/kouan/shopinfo.html">Cathy’s Cafe &amp; Bar</a></li>
+            <li class="menu_item"><a href="/kouan/shopinfo.html">信濃おやき幸庵</a></li>
+            <li class="menu_item"><a href="/kouan/shopinfo.html">猪乃源（いのげん）</a></li>
+            <li class="menu_item"><a href="/kouan/shopinfo.html">ぽかぽかランド美麻</a></li>
+          </ul>
+        </li>
+        <li class="menu_item">
+          <span class="has_child has_child__takeout js_tgl_open-close">テイクアウト</span>
+          <ul class="menu menu__child">
+            <li class="menu_item"><a href="/cathys-cafe-and-bar/takeout.html">Cathy’s Cafe &amp; Bar</a></li>
+            <li class="menu_item"><a href="/cathys-cafe-and-bar/takeout.html">信濃おやき幸庵</a></li>
+            <li class="menu_item"><a href="/cathys-cafe-and-bar/takeout.html">猪乃源（いのげん）</a></li>
+            <li class="menu_item"><a href="/cathys-cafe-and-bar/takeout.html">ぽかぽかランド美麻</a></li>
+          </ul>
+        </li>
+        <li class="menu_item">
+          <span class="has_child has_child__delivery js_tgl_open-close">デリバリー</span>
+          <ul class="menu menu__child">
+            <li class="menu_item"><a href="/kouan/delivery.html">猪乃源（いのげん）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu_bar js_tgl_menu"><span class="menu_bar_line"></span></div>
+  </header>
+
+  <main class="site_main">
+
+    <!-- 電話受付ボタン：画面下に固定表示 -->
+    <a href="tel:0000000000" class="tel_order is__closed">000-000-0000</a>
+
+    <!-- 営業時間外に表示 -->
+    <div class="closed_message">
+      <em>＜現在は受付時間外です＞</em>
+      <span>営業時間　00：00〜00：00</span>
+    </div>
+
+    <!-- page header -->
+    <header class="page_header">
+      <div class="page_name"><img src="/assets/images/common/tit_delivery.svg" alt="デリバリー"></div>
+      <div class="shop_name">信濃おやき 幸庵</div>
+      <div class="page_mark"><img src="/assets/images/common/ico_delivery_mark.svg" alt=""></div>
+    </header>
+
+    <section class="sec sec__pages">
+      <div class="inner">
+
+        <!-- 情報リスト -->
+        <dl class="list_info list_info__delivery">
+          <dt>配達対応可能時間</dt>
+          <dd>
+            <p>要相談（電話にて確認）</p>
+          </dd>
+          <dt>注文締め切り時間</dt>
+          <dd>
+            <p>要相談（電話にて確認）</p>
+          </dd>
+          <dt>決済方法</dt>
+          <dd>
+            <p>●現金のみ</p>
+          </dd>
+          <dt>その他</dt>
+          <dd>
+            <p>基本冷凍販売ですが、蒸したても可能（要相談）<br>デリバリーには別途料金がかかります。</p>
+          </dd>
+        </dl>
+
+        <h3 class="hl_border hl_border__2">ご利用方法<span></span></h3>
+        <ol class="list_num list_num__delivery">
+          <li class="list_item"><span class="item_num">1</span><em>メニューより商品を選ぶ</em></li>
+          <li class="list_item"><span class="item_num">2</span><em>電話する</em><span class="item_note">※メニューページに表示されている電話ボタンからかけられます。</span></li>
+          <li class="list_item"><span class="item_num">3</span><em>注文内容を伝える</em><span class="item_note">※電話にて必要事項・注文内容をお聞きし、配送日時等調整させていただきます</span></li>
+          <li class="list_item"><span class="item_num">4</span><em>商品受取・支払い</em><span class="item_note">※各店舗の支払い方法で代金をお支払いください</span></li>
+        </ol>
+
+        <!-- デリバリーメニュー -->
+        <h3 class="hl_border hl_border__2">デリバリーメニュー<span></span></h3>
+        <!-- この店舗のデリバリーメニュー -->
+        <ul class="list_memu list_memu__delivery">
+          <li class="list_shop_item">
+            <div class="shop_image" style="background-image: url(/assets/images/kouan/img_delivery@2x.jpg)"></div>
+            <div class="product_name">信州きのこ</div>
+            <div class="product_price">¥200</div>
+            <div class="product_txt">信州きのこを醤油で煮込みました。きのこの歯ごたえがおいしい！</div>
+          </li>
+          <li class="list_shop_item">
+            <div class="shop_image" style="background-image: url(/assets/images/kouan/img_delivery@2x.jpg)"></div>
+            <div class="product_name">信州きのこ</div>
+            <div class="product_price">¥200</div>
+            <div class="product_txt">信州きのこを醤油で煮込みました。きのこの歯ごたえがおいしい！</div>
+          </li>
+          <li class="list_shop_item">
+            <div class="shop_image" style="background-image: url(/assets/images/kouan/img_delivery@2x.jpg)"></div>
+            <div class="product_name">信州きのこ</div>
+            <div class="product_price">¥200</div>
+            <div class="product_txt">信州きのこを醤油で煮込みました。きのこの歯ごたえがおいしい！</div>
+          </li>
+        </ul>
+
+        <!-- page links -->
+        <div class="page_links">
+          <a href="/cathys-cafe-and-bar/takeout.html" class="btn btn__3 btn__icon">テイクアウトメニューを見る</a>
+          <a href="/kouan/shopinfo.html" class="btn btn__1 btn__icon">店舗紹介を見る</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="/" class="logo_footer"><img src="/assets/images/common/logo_white.svg" alt="美麻ウマイもん31"></a>
+    <div class="copyrights">販売業者表記：団体名〇〇〇〇〇〇〇〇〇〇〇〇〇〇</div>
+  </footer>
+
+  <script src="/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
