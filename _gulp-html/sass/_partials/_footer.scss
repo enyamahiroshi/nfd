@@ -1,24 +1,39 @@
 /* ----------------------------------------------------------------
   フッターのレイアウト
 ---------------------------------------------------------------- */
-footer {
-  padding: 48px 20px 30px;
+.footer {
+  padding: 30px 20px;
   text-align: center;
-  background-color: $brown;
-  .logo_footer {
-    width: 150px;
-    margin: 0 auto;
+  background-color: #F7F7F7;
+  .org-name {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.375;
+    letter-spacing: .05em;
   }
-  .copyrights {
-    margin-top: 45px;
-    font-size: 1.1rem;
-    color: #fff;
+  .org-address {
+    margin-top: 16px;
+    font-style: normal;
+    line-height: 1.714;
+    letter-spacing: .05em;
+  }
+  .copyright {
+    margin-top: 25px;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: .05em;
   }
 }
-
-body.delivery,
-body.takeout {
-  footer {
-    padding-bottom: 94px;
+@include res_min( $break ){
+  .footer {
+    padding: 40px 133px 36px;
+    margin-top: 100px;
+    .org-name {
+      font-size: 1.6rem;
+      line-height: 1.1875;
+    }
+    .copyright {
+      margin-top: 35px;
+    }
   }
 }

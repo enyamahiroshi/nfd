@@ -2,18 +2,18 @@
 // * Valiables
 // ---------------------------------------------------------------
 $break: 768;
-$maxsize: 900;
+$maxsize: 800;
 $baseFontSize: 15;
 
-$ff-go: 'NotoSansCJKjp', sans-serif;
+$ff-go: Helvetica , "Helvetica Neue" , Arial , sans-serif;
 $ff-num: 'Roboto', sans-serif;
 $ff-icon: 'ForkAwesome';
 
-$baseColor: #292929;
+$baseColor: #666;
 $mainColor: #002465;
 $mainColorLight: #eaf0fa;
-$linkColor: #333333;
-$linkHoverColor: #333333;
+$linkColor: $baseColor;
+$linkHoverColor: #E7340C;
 
 $gray1: #B5B5B5;
 $brown: #40210F;

@@ -16,8 +16,8 @@ body{
   height: 100%;
   font-family: $ff-go;
   font-size: 1.4rem;
-  font-weight: normal;
-  line-height: 1.8;
+  font-weight: 300;
+  line-height: 1.857;
   letter-spacing: 0;
   color: $baseColor;
   text-align: left;
@@ -26,18 +26,20 @@ body{
 }
 @include res_min( $break ){
   body{
+    font-size: 1.6rem;
+    line-height: 2;
   }
 }
 
 // SPで表示
-.no-pc{}
+.sp{}
 @include res_min( $break ){
-  .no-pc{ display: none; }
+  .sp{ display: none; }
 }
 // PCで表示
-.no-sp{ display: none; }
+.pc{ display: none; }
 @include res_min( $break ){
-  .no-sp{ display: inline; }
+  .pc{ display: inline; }
 }
 
 *,
@@ -52,7 +54,7 @@ body{
 h1,h2,h3,h4,h5,h6{
   font-weight: normal;
   line-height: 1.6em;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* ------------------------------------
@@ -69,6 +71,8 @@ strong{
 // ----------------------------------*/
 ol, ul{
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ------------------------------------
@@ -78,7 +82,7 @@ p{
   &:first-of-type {
     margin-top: 0;
   }
-  margin: 1em auto 0;
+  margin: 2em auto 0;
   text-align: left;
 }
 @include res_min( $break ){
@@ -88,16 +92,20 @@ p{
 /* ------------------------------------
 //  画像
 // ----------------------------------*/
+figure {
+  margin: 0;
+}
+
 img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
   line-height: 1;
 }
 @include res_min( $break ){
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
   }
 }
 
@@ -106,12 +114,11 @@ img {
 // ----------------------------------*/
 a{
   display: inline-block;
-  color: $baseColor;
   text-decoration: none;
-  transition: all .1s linear 0s;
+  @include transition();
   &:link,&:visited {
     color: $linkColor;
-    text-decoration: none;
+    text-decoration: underline;
   }
   &:hover,&:active {
     color: $linkHoverColor;
@@ -119,34 +126,32 @@ a{
   }
   // ウェブアイコン使用時
   i{
-    margin: 0 4px;
+    // margin: 0 4px;
   }
-  // transform使用時にchromeでズレが生じるのを防ぐ
-  backface-visibility: hidden;
+  backface-visibility: hidden; // transform使用時にchromeでズレが生じるのを防ぐ
 }
 //個別にリンクカラー等を変更
-header, footer {
+.header,
+.footer {
   a{
     &:link,&:visited {
-      color: $linkColor;
       text-decoration: none;
     }
     &:hover,&:active {
       opacity: 1;
-      color: $linkHoverColor;
     }
   }
 }
 //画像リンク
-a img {
-  opacity: 1;
-}
-@include res_min( $break ){
-  a img {
-    transition: opacity .1s linear 0s;
-    backface-visibility: hidden;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
+// a img {
+//   opacity: 1;
+// }
+// @include res_min( $break ){
+//   a img {
+//     @include transition();
+//     backface-visibility: hidden; // transform使用時にchromeでズレが生じるのを防ぐ
+//     &:hover {
+//       opacity: 0.8;
+//     }
+//   }
+// }
